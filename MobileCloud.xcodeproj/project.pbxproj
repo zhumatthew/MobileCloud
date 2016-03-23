@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3AECBAF1CA316720038DCFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AECBAE1CA316720038DCFA /* AppDelegate.swift */; };
+		B3AECBB11CA316720038DCFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AECBB01CA316720038DCFA /* ViewController.swift */; };
+		B3AECBB41CA316720038DCFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AECBB21CA316720038DCFA /* Main.storyboard */; };
+		B3AECBB71CA316720038DCFA /* MobileCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3AECBB51CA316720038DCFA /* MobileCloud.xcdatamodeld */; };
+		B3AECBB91CA316720038DCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AECBB81CA316720038DCFA /* Assets.xcassets */; };
+		B3AECBBC1CA316720038DCFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AECBBA1CA316720038DCFA /* LaunchScreen.storyboard */; };
+		B3AECBC71CA316720038DCFA /* MobileCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AECBC61CA316720038DCFA /* MobileCloudTests.swift */; };
+		B3AECBD21CA316720038DCFA /* MobileCloudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AECBD11CA316720038DCFA /* MobileCloudUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3AECBC31CA316720038DCFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AECBA31CA316720038DCFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3AECBAA1CA316720038DCFA;
+			remoteInfo = MobileCloud;
+		};
+		B3AECBCE1CA316720038DCFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3AECBA31CA316720038DCFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3AECBAA1CA316720038DCFA;
+			remoteInfo = MobileCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B3AECBAB1CA316720038DCFA /* MobileCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3AECBAE1CA316720038DCFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3AECBB01CA316720038DCFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3AECBB31CA316720038DCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3AECBB61CA316720038DCFA /* MobileCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileCloud.xcdatamodel; sourceTree = "<group>"; };
+		B3AECBB81CA316720038DCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3AECBBB1CA316720038DCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3AECBBD1CA316720038DCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3AECBC21CA316720038DCFA /* MobileCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3AECBC61CA316720038DCFA /* MobileCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCloudTests.swift; sourceTree = "<group>"; };
+		B3AECBC81CA316720038DCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3AECBCD1CA316720038DCFA /* MobileCloudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileCloudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3AECBD11CA316720038DCFA /* MobileCloudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCloudUITests.swift; sourceTree = "<group>"; };
+		B3AECBD31CA316720038DCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3AECBA81CA316720038DCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3AECBBF1CA316720038DCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3AECBCA1CA316720038DCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3AECBA21CA316720038DCFA = {
+			isa = PBXGroup;
+			children = (
+				B3AECBAD1CA316720038DCFA /* MobileCloud */,
+				B3AECBC51CA316720038DCFA /* MobileCloudTests */,
+				B3AECBD01CA316720038DCFA /* MobileCloudUITests */,
+				B3AECBAC1CA316720038DCFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3AECBAC1CA316720038DCFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3AECBAB1CA316720038DCFA /* MobileCloud.app */,
+				B3AECBC21CA316720038DCFA /* MobileCloudTests.xctest */,
+				B3AECBCD1CA316720038DCFA /* MobileCloudUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3AECBAD1CA316720038DCFA /* MobileCloud */ = {
+			isa = PBXGroup;
+			children = (
+				B3AECBAE1CA316720038DCFA /* AppDelegate.swift */,
+				B3AECBB01CA316720038DCFA /* ViewController.swift */,
+				B3AECBB21CA316720038DCFA /* Main.storyboard */,
+				B3AECBB81CA316720038DCFA /* Assets.xcassets */,
+				B3AECBBA1CA316720038DCFA /* LaunchScreen.storyboard */,
+				B3AECBBD1CA316720038DCFA /* Info.plist */,
+				B3AECBB51CA316720038DCFA /* MobileCloud.xcdatamodeld */,
+			);
+			path = MobileCloud;
+			sourceTree = "<group>";
+		};
+		B3AECBC51CA316720038DCFA /* MobileCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3AECBC61CA316720038DCFA /* MobileCloudTests.swift */,
+				B3AECBC81CA316720038DCFA /* Info.plist */,
+			);
+			path = MobileCloudTests;
+			sourceTree = "<group>";
+		};
+		B3AECBD01CA316720038DCFA /* MobileCloudUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3AECBD11CA316720038DCFA /* MobileCloudUITests.swift */,
+				B3AECBD31CA316720038DCFA /* Info.plist */,
+			);
+			path = MobileCloudUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3AECBAA1CA316720038DCFA /* MobileCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3AECBD61CA316720038DCFA /* Build configuration list for PBXNativeTarget "MobileCloud" */;
+			buildPhases = (
+				B3AECBA71CA316720038DCFA /* Sources */,
+				B3AECBA81CA316720038DCFA /* Frameworks */,
+				B3AECBA91CA316720038DCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileCloud;
+			productName = MobileCloud;
+			productReference = B3AECBAB1CA316720038DCFA /* MobileCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3AECBC11CA316720038DCFA /* MobileCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3AECBD91CA316720038DCFA /* Build configuration list for PBXNativeTarget "MobileCloudTests" */;
+			buildPhases = (
+				B3AECBBE1CA316720038DCFA /* Sources */,
+				B3AECBBF1CA316720038DCFA /* Frameworks */,
+				B3AECBC01CA316720038DCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3AECBC41CA316720038DCFA /* PBXTargetDependency */,
+			);
+			name = MobileCloudTests;
+			productName = MobileCloudTests;
+			productReference = B3AECBC21CA316720038DCFA /* MobileCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3AECBCC1CA316720038DCFA /* MobileCloudUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3AECBDC1CA316720038DCFA /* Build configuration list for PBXNativeTarget "MobileCloudUITests" */;
+			buildPhases = (
+				B3AECBC91CA316720038DCFA /* Sources */,
+				B3AECBCA1CA316720038DCFA /* Frameworks */,
+				B3AECBCB1CA316720038DCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3AECBCF1CA316720038DCFA /* PBXTargetDependency */,
+			);
+			name = MobileCloudUITests;
+			productName = MobileCloudUITests;
+			productReference = B3AECBCD1CA316720038DCFA /* MobileCloudUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3AECBA31CA316720038DCFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DHM;
+				TargetAttributes = {
+					B3AECBAA1CA316720038DCFA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					B3AECBC11CA316720038DCFA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B3AECBAA1CA316720038DCFA;
+					};
+					B3AECBCC1CA316720038DCFA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B3AECBAA1CA316720038DCFA;
+					};
+				};
+			};
+			buildConfigurationList = B3AECBA61CA316720038DCFA /* Build configuration list for PBXProject "MobileCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3AECBA21CA316720038DCFA;
+			productRefGroup = B3AECBAC1CA316720038DCFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3AECBAA1CA316720038DCFA /* MobileCloud */,
+				B3AECBC11CA316720038DCFA /* MobileCloudTests */,
+				B3AECBCC1CA316720038DCFA /* MobileCloudUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3AECBA91CA316720038DCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3AECBBC1CA316720038DCFA /* LaunchScreen.storyboard in Resources */,
+				B3AECBB91CA316720038DCFA /* Assets.xcassets in Resources */,
+				B3AECBB41CA316720038DCFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3AECBC01CA316720038DCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3AECBCB1CA316720038DCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3AECBA71CA316720038DCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3AECBB11CA316720038DCFA /* ViewController.swift in Sources */,
+				B3AECBAF1CA316720038DCFA /* AppDelegate.swift in Sources */,
+				B3AECBB71CA316720038DCFA /* MobileCloud.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3AECBBE1CA316720038DCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3AECBC71CA316720038DCFA /* MobileCloudTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3AECBC91CA316720038DCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3AECBD21CA316720038DCFA /* MobileCloudUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3AECBC41CA316720038DCFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3AECBAA1CA316720038DCFA /* MobileCloud */;
+			targetProxy = B3AECBC31CA316720038DCFA /* PBXContainerItemProxy */;
+		};
+		B3AECBCF1CA316720038DCFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3AECBAA1CA316720038DCFA /* MobileCloud */;
+			targetProxy = B3AECBCE1CA316720038DCFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3AECBB21CA316720038DCFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3AECBB31CA316720038DCFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3AECBBA1CA316720038DCFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3AECBBB1CA316720038DCFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3AECBD41CA316720038DCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3AECBD51CA316720038DCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3AECBD71CA316720038DCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobileCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhu-ke.MobileCloud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B3AECBD81CA316720038DCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobileCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhu-ke.MobileCloud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B3AECBDA1CA316720038DCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MobileCloudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhu-ke.MobileCloudTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileCloud.app/MobileCloud";
+			};
+			name = Debug;
+		};
+		B3AECBDB1CA316720038DCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MobileCloudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhu-ke.MobileCloudTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileCloud.app/MobileCloud";
+			};
+			name = Release;
+		};
+		B3AECBDD1CA316720038DCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MobileCloudUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhu-ke.MobileCloudUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MobileCloud;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B3AECBDE1CA316720038DCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MobileCloudUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhu-ke.MobileCloudUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MobileCloud;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3AECBA61CA316720038DCFA /* Build configuration list for PBXProject "MobileCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3AECBD41CA316720038DCFA /* Debug */,
+				B3AECBD51CA316720038DCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3AECBD61CA316720038DCFA /* Build configuration list for PBXNativeTarget "MobileCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3AECBD71CA316720038DCFA /* Debug */,
+				B3AECBD81CA316720038DCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B3AECBD91CA316720038DCFA /* Build configuration list for PBXNativeTarget "MobileCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3AECBDA1CA316720038DCFA /* Debug */,
+				B3AECBDB1CA316720038DCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B3AECBDC1CA316720038DCFA /* Build configuration list for PBXNativeTarget "MobileCloudUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3AECBDD1CA316720038DCFA /* Debug */,
+				B3AECBDE1CA316720038DCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3AECBB51CA316720038DCFA /* MobileCloud.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3AECBB61CA316720038DCFA /* MobileCloud.xcdatamodel */,
+			);
+			currentVersion = B3AECBB61CA316720038DCFA /* MobileCloud.xcdatamodel */;
+			path = MobileCloud.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B3AECBA31CA316720038DCFA /* Project object */;
+}
