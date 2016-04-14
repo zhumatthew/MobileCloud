@@ -13,6 +13,7 @@
 @interface ImageProcessor : NSObject
 
 + (UIImage*) createPosterizeImage:(CGImageRef)srcCGImage;
++ (UIImage*) createDistanceImage:(CGImageRef)srcCGImage;
 + (UIImage*) convertImage;
 
 @end

@@ -15,9 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        // imageView.image = ImageProcessor.createPosterizeImage(nil)
-        imageView.image = ImageProcessor.convertImage()
-
+//         imageView.image = ImageProcessor.createPosterizeImage(nil)
+//        imageView.image = ImageProcessor.convertImage()
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = ImageProcessor.createDistanceImage(nil)
        // ImageProcessor.convertImage()
 //        imageView.image = UIImage(named: "mirage")
         

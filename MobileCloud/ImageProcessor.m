@@ -28,8 +28,61 @@
 //    MagickBooleanType = status;
     
     // MagickMorphologyImage(<#MagickWand *#>, <#MorphologyMethod#>, <#const ssize_t#>, <#KernelInfo *#>)
-    MagickBooleanType status = MagickPosterizeImage(wand,6,MagickFalse);
-    // MagickBooleanType status = MagickNegateImage(wand, MagickFalse);
+//    MagickBooleanType status = MagickPosterizeImage(wand,6,MagickFalse);
+     MagickBooleanType status = MagickNegateImage(wand, MagickFalse);
+    if (status == MagickFalse)
+    {
+        NSLog(@"FAIL");
+    }
+    
+    // Convert wand back to UIImage
+    unsigned char * c_blob;
+    size_t data_length;
+    c_blob = MagickGetImageBlob(wand,&data_length);
+    data = [NSData dataWithBytes:c_blob length:data_length];
+    UIImage *img = [UIImage imageWithData:data];
+    
+    DestroyMagickWand(wand);
+    MagickWandTerminus();
+    return img;
+}
+
++ (UIImage*) createDistanceImage:(CGImageRef)srcCGImage {
+    //    MagickWandGenesis();
+    //    magick_wand = NewMagickWand();
+    //    UIImage *src = [UIImage imageNamed:@"mirage"];
+    //    ConvertImageCommand(<#ImageInfo *#>, <#int#>, <#char **#>, <#char **#>, <#MagickExceptionInfo *#>)
+    
+    MagickWandGenesis();
+    MagickWand *wand = NewMagickWand();
+    NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"overcome.jpg"]);
+    //    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:@"continuity"],1.0);
+    
+    MagickReadImageBlob(wand, [data bytes], [data length]);
+    
+    //    MagickBooleanType = status;
+    
+    // wand, method, iterations, morphology kernel (array of doubles)
+    
+    
+    //ftp://gd.tuwien.ac.at/graphics/ImageMagick/www/api/morphology.html
+    
+    // Diamond:1
+    // Disk:6.4
+//    KernelInfo *kernelInfo = AcquireKernelInfo("Octagonal:10");
+    KernelInfo *kernelInfo = AcquireKernelInfo("Octagon:3");
+    // KernelInfo kernelInfo = AcquireKernelBuiltIn(GaussianKernel,const GeometryInfo *);
+    // KernelInfo types defined in morphology.h
+//    MagickBooleanType status = MagickMorphologyImage(wand, DistanceMorphology, 1, kernelInfo);
+    CFTimeInterval startTime = CACurrentMediaTime();
+
+    MagickBooleanType status = MagickMorphologyImage(wand, DilateMorphology, 1, kernelInfo);
+    
+    CFTimeInterval endTime = CACurrentMediaTime();
+    NSLog(@"Total Runtime of dilation: %g s", endTime - startTime);
+
+//    MagickBooleanType status = MagickPosterizeImage(wand,6,MagickFalse);
+    //MagickBooleanType status = MagickNegateImage(wand, MagickFalse);
     if (status == MagickFalse)
     {
         NSLog(@"FAIL");
