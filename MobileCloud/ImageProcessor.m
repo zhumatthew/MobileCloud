@@ -10,6 +10,8 @@
 
 @implementation ImageProcessor : NSObject
 
+// special effects, morphology, and noise and color reduction are probably the most intensive
+
 + (UIImage*) createPosterizeImage:(CGImageRef)srcCGImage {
 //    MagickWandGenesis();
 //    magick_wand = NewMagickWand();
@@ -19,11 +21,15 @@
     MagickWandGenesis();
     MagickWand *wand = NewMagickWand();
     NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"mirage"]);
+//    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:@"continuity"],1.0);
+
     MagickReadImageBlob(wand, [data bytes], [data length]);
     
 //    MagickBooleanType = status;
     
+    // MagickMorphologyImage(<#MagickWand *#>, <#MorphologyMethod#>, <#const ssize_t#>, <#KernelInfo *#>)
     MagickBooleanType status = MagickPosterizeImage(wand,6,MagickFalse);
+    // MagickBooleanType status = MagickNegateImage(wand, MagickFalse);
     if (status == MagickFalse)
     {
         NSLog(@"FAIL");
@@ -92,12 +98,198 @@
  
  */
 
-
-- (void)convertImage {
-    MagickWandGenesis();
+/*
+- (IBAction)buttonConv04:(id)sender {
+    
+    // MagickWandGenesis();
+    
+    int arg_count = 4;
+    char *input_image = strdup([[[NSBundle mainBundle] pathForResource:@"img_0" ofType:@"wmf"] UTF8String]);
+    char *output_image = strdup([[[NSBundle mainBundle] pathForResource:@"iphone" ofType:@"png"] UTF8String]);
+    char *args[] = {"convert", input_image, "-negate", output_image, NULL};
+    
+    MagickCoreGenesis(*args, MagickTrue);
     magick_wand = NewMagickWand();
+    NSData * dataObject = UIImageJPEGRepresentation([UIImage imageWithContentsOfFile:[NSString stringWithUTF8String:input_image]], 1.0f);
+    MagickBooleanType status;
+    status = MagickReadImageBlob(magick_wand, [dataObject bytes], [dataObject length]);
+    
+    if (status == MagickFalse) {
+        ThrowWandException(magick_wand);
+    }
+    
+    int args_count;
+    for(args_count = 0; args[args_count] != (char *)NULL; args_count++);
+    
+    ImageInfo *image_info = AcquireImageInfo();
+    ExceptionInfo *exception = AcquireExceptionInfo();
+    
+    status = ConvertImageCommand(image_info, arg_count, args, NULL, exception);
+    
+    if (exception->severity != UndefinedException)
+    {
+        status = MagickTrue;
+        CatchException(exception);
+    }
+    
+    if (status == MagickFalse)
+    {
+        NSLog(@"FAIL");
+    }
+    
+    NSData * dataObject2 = UIImageJPEGRepresentation([UIImage imageWithContentsOfFile:[NSString stringWithUTF8String:output_image]], 1.0f);
+    status = MagickReadImageBlob(magick_wand, [dataObject2 bytes], [dataObject2 length]);
+    
+    size_t my_size;
+    unsigned char * my_image = MagickGetImageBlob(magick_wand, &my_size);
+    NSData * data = [[NSData alloc] initWithBytes:my_image length:my_size];
+    free(my_image);
+    magick_wand = DestroyMagickWand(magick_wand);
+    MagickWandTerminus();
+    UIImage * image = [[UIImage alloc] initWithData:data];
+    
+    free(input_image);
+    free(output_image);
+    
+    image_info=DestroyImageInfo(image_info);
+    exception=DestroyExceptionInfo(exception);
+    
+    MagickCoreTerminus();
+    
+    [iKK_imageView setImage:image];
+}
+ */
+
++ (UIImage*)convertImage {
+    
+    CFTimeInterval startTime = CACurrentMediaTime();
+    
+    NSLog(@"I am using MagicWand Library");
+    //GIT path https://github.com/marforic/imagemagick_lib_iphone
+    
+    MagickWandGenesis();
+    MagickWand *magick_wand = NewMagickWand();
+    
+    MagickSetFormat(magick_wand, "jpg");
+    
+    char *input_image = strdup([[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] UTF8String]);
+    
+    //NSData * dataObject = UIImagePNGRepresentation([UIImage imageNamed:@"daftpunk.jpg"]);
+    NSData * dataObject = UIImagePNGRepresentation([UIImage imageWithContentsOfFile:[NSString stringWithUTF8String:input_image]]);
+    
+    NSLog(@"Initial format: %@",[self mimeTypeByGuessingFromData:dataObject]);
+    //UIImageJPEGRepresentation([imageViewButton imageForState:UIControlStateNormal], 90);
+    MagickBooleanType status;
+    status = MagickReadImageBlob(magick_wand, [dataObject bytes], [dataObject length]);
+    if (status == MagickFalse) {
+//        ThrowWandException(magick_wand);
+    }
+    
+    size_t my_size;
+    unsigned char * my_image = MagickGetImageBlob(magick_wand, &my_size);
+    NSData * data = [[NSData alloc] initWithBytes:my_image length:my_size];
+    free(my_image);
+    magick_wand = DestroyMagickWand(magick_wand);
+    MagickWandTerminus();
+    UIImage * image = [[UIImage alloc] initWithData:data];
+    
+    NSLog(@"Final format: %@",[self mimeTypeByGuessingFromData:data]);
+    
+    CFTimeInterval endTime = CACurrentMediaTime();
+    NSLog(@"Total Runtime: %g s", endTime - startTime);
+
+    
+    return image;
+    
+}
+
+//+ (UIImage*)convertImage {
+//    
+//    // MagickWandGenesis();
+//    
+//    CFTimeInterval startTime = CACurrentMediaTime();
+//    
+//    char *input_image = strdup([[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] UTF8String]);
+//    char *output_image = strdup([[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] UTF8String]);
+//    
+//    // NSLog(@"Initial format: %@",[self mimeTypeByGuessingFromData:UIImageJPEGRepresentation([UIImage imageWithContentsOfFile:[NSString stringWithUTF8String:input_image]], 1.0f)]);
+//
+//
+//    //char *output_image = strdup([[[[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"mirage.jpg"] UTF8String]);
+//    char *args[] = {"convert", input_image, "-monitor", "-negate", output_image, NULL};
+//    
+//    MagickCoreGenesis(*args, MagickTrue);
+//    MagickWand *magick_wand = NewMagickWand();
+//    NSData * dataObject = UIImagePNGRepresentation([UIImage imageWithContentsOfFile:[NSString stringWithUTF8String:input_image]]);
+//    MagickBooleanType status;
+//    status = MagickReadImageBlob(magick_wand, [dataObject bytes], [dataObject length]);
+//    
+//    if (status == MagickFalse) {
+//        //ThrowWandException(magick_wand);
+//    }
+//    
+//    
+//    
+//    int arg_count;
+//    for(arg_count = 0; args[arg_count] != (char *)NULL; arg_count++);
+//    
+//    ImageInfo *image_info = AcquireImageInfo();
+//    ExceptionInfo *exception = AcquireExceptionInfo();
+//    
+//    status = ConvertImageCommand(image_info, arg_count, args, NULL, exception);
+//    
+//    if (exception->severity != UndefinedException)
+//    {
+//        status = MagickTrue;
+//        CatchException(exception);
+//    }
+//    
+//    if (status == MagickFalse)
+//    {
+//        NSLog(@"FAIL");
+//    }
+//    
+//    NSData * dataObject2 = UIImageJPEGRepresentation([UIImage imageWithContentsOfFile:[NSString stringWithUTF8String:output_image]], 1.0f);
+//    status = MagickReadImageBlob(magick_wand, [dataObject2 bytes], [dataObject2 length]);
+//    
+//    size_t my_size;
+//    unsigned char * my_image = MagickGetImageBlob(magick_wand, &my_size);
+//    NSData * data = [[NSData alloc] initWithBytes:my_image length:my_size];
+//    free(my_image);
+//    magick_wand = DestroyMagickWand(magick_wand);
+//    MagickWandTerminus();
+//    UIImage * image = [[UIImage alloc] initWithData:data];
+//    
+//    free(input_image);
+//    free(output_image);
+//    
+//    NSLog(@"Final format: %@",[self mimeTypeByGuessingFromData:data]);
+//
+//    
+//    image_info=DestroyImageInfo(image_info);
+//    exception=DestroyExceptionInfo(exception);
+//    
+//    MagickCoreTerminus();
+//    
+//    CFTimeInterval endTime = CACurrentMediaTime();
+//    NSLog(@"Total Runtime: %g s", endTime - startTime);
+//    
+//    return image;
+//    
+//}
+
+/*
+
+
++ (UIImage*)convertImage {
+    MagickWandGenesis();
+    MagickWand *magick_wand = NewMagickWand();
     //UIImageJPEGRepresentation([imageViewButton imageForState:UIControlStateNormal], 90);
     NSData * dataObject = UIImagePNGRepresentation([UIImage imageNamed:@"mirage"]);
+    // NSData *dataObject = UIImageJPEGRepresentation([UIImage imageNamed:@"continuity"],1.0);
+
+    
+    NSLog(@"Initial format: %@",[self mimeTypeByGuessingFromData:dataObject]);
     
     MagickBooleanType status;
     status = MagickReadImageBlob(magick_wand, [dataObject bytes], [dataObject length]);
@@ -107,12 +299,34 @@
     }
     
     // Get image from bundle.
-    const char *input_image = [[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] UTF8String];
-    const char *output_image = [[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] UTF8String];
+    char *input_image = strdup([[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] UTF8String]);
+    char *output_image = strdup([[[[[NSBundle mainBundle] pathForResource:@"mirage" ofType:@"png"] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"mirage.jpg"] UTF8String]);
     
-    const char *argv[] = { "convert", input_image, "-resize", "100x100", output_image, NULL };
+
+    // output_image	char *	"/private/var/mobile/Containers/Bundle/Application/20CEE1FB-6C2B-44D1-B513-1B47E2C530E1/MobileCloud.app/mirage.jpg"	0x00000001740f8480
+    
+//    char *input_image = strdup([@"input" UTF8String]);
+//    char *output_image = strdup([@"output" UTF8String]);
+    // char *output_image = strdup([@"output" UTF8String])
+    
+    // output_image = [@"wassup" UTF8String];
+
+    
+//    int arg_count = 3;
+//    char *argv[] = {"convert", input_image, output_image, NULL};
+    // char *argv[] = {"convert", "jpg", NULL};
+    
+    int arg_count = 5;
+    char *argv[] = {"convert", input_image, "-define", "jpeg:optimize-coding=on", output_image, NULL};
+
+    
+    // int arg_count = 4;
+    // char *argv[] = {"convert", input_image, "jpg", output_image, NULL};
+    //char *argv[] = { "convert", input_image, "-resize", "100x100", output_image, NULL };
+
+//    const char *argv[] = { "convert", input_image, "-resize", "100x100", output_image, NULL };
     // ConvertImageCommand(ImageInfo *, int, char **, char **, MagickExceptionInfo *);
-    status = ConvertImageCommand(AcquireImageInfo(), 4, (char**)argv, NULL, AcquireExceptionInfo());
+    status = ConvertImageCommand(AcquireImageInfo(), arg_count, (char**)argv, NULL, AcquireExceptionInfo());
     
     if (status == MagickFalse) {
 //        ThrowWandException(magick_wand);
@@ -124,9 +338,63 @@
     free(my_image);
     magick_wand = DestroyMagickWand(magick_wand);
     MagickWandTerminus();
+    
+    NSLog(@"Final format: %@",[self mimeTypeByGuessingFromData:data]);
+    
     UIImage *image = [[UIImage alloc] initWithData:data];
     
+    return image;
+
+    
     // [imageViewButton setImage:image forState:UIControlStateNormal];
+}
+ 
+ */
+
++ (NSString *)mimeTypeByGuessingFromData:(NSData *)data {
+    
+    char bytes[12] = {0};
+    [data getBytes:&bytes length:12];
+    
+    const char bmp[2] = {'B', 'M'};
+    const char gif[3] = {'G', 'I', 'F'};
+    const char swf[3] = {'F', 'W', 'S'};
+    const char swc[3] = {'C', 'W', 'S'};
+    const char jpg[3] = {0xff, 0xd8, 0xff};
+    const char psd[4] = {'8', 'B', 'P', 'S'};
+    const char iff[4] = {'F', 'O', 'R', 'M'};
+    const char webp[4] = {'R', 'I', 'F', 'F'};
+    const char ico[4] = {0x00, 0x00, 0x01, 0x00};
+    const char tif_ii[4] = {'I','I', 0x2A, 0x00};
+    const char tif_mm[4] = {'M','M', 0x00, 0x2A};
+    const char png[8] = {0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a};
+    const char jp2[12] = {0x00, 0x00, 0x00, 0x0c, 0x6a, 0x50, 0x20, 0x20, 0x0d, 0x0a, 0x87, 0x0a};
+    
+    
+    if (!memcmp(bytes, bmp, 2)) {
+        return @"image/x-ms-bmp";
+    } else if (!memcmp(bytes, gif, 3)) {
+        return @"image/gif";
+    } else if (!memcmp(bytes, jpg, 3)) {
+        return @"image/jpeg";
+    } else if (!memcmp(bytes, psd, 4)) {
+        return @"image/psd";
+    } else if (!memcmp(bytes, iff, 4)) {
+        return @"image/iff";
+    } else if (!memcmp(bytes, webp, 4)) {
+        return @"image/webp";
+    } else if (!memcmp(bytes, ico, 4)) {
+        return @"image/vnd.microsoft.icon";
+    } else if (!memcmp(bytes, tif_ii, 4) || !memcmp(bytes, tif_mm, 4)) {
+        return @"image/tiff";
+    } else if (!memcmp(bytes, png, 8)) {
+        return @"image/png";
+    } else if (!memcmp(bytes, jp2, 12)) {
+        return @"image/jp2";
+    }
+    
+    return @"application/octet-stream"; // default type
+    
 }
 
 

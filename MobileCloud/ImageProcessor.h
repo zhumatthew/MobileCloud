@@ -11,11 +11,8 @@
 #import <Foundation/Foundation.h>
 
 @interface ImageProcessor : NSObject
-{
-    MagickWand *magick_wand;
-}
 
 + (UIImage*) createPosterizeImage:(CGImageRef)srcCGImage;
-
++ (UIImage*) convertImage;
 
 @end
