@@ -47,6 +47,131 @@
     return img;
 }
 
++ (UIImage*) dilateImage:(NSString *)srcImage {
+    
+    MagickWandGenesis();
+    MagickWand *wand = NewMagickWand();
+    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:srcImage], 1.0);
+    MagickReadImageBlob(wand, [data bytes], [data length]);
+    KernelInfo *kernelInfo = AcquireKernelInfo("Octagon:3");
+    
+    MagickBooleanType status = MagickMorphologyImage(wand, DilateMorphology, 1, kernelInfo);
+    
+    if (status == MagickFalse) {
+        NSLog(@"Dilation failed");
+    }
+    
+    unsigned char * c_blob;
+    size_t data_length;
+    c_blob = MagickGetImageBlob(wand,&data_length);
+    data = [NSData dataWithBytes:c_blob length:data_length];
+    UIImage *img = [UIImage imageWithData:data];
+    
+    DestroyMagickWand(wand);
+    MagickWandTerminus();
+    return img;
+    
+}
+
++ (UIImage*) erodeImage:(NSString *)srcImage {
+    
+    MagickWandGenesis();
+    MagickWand *wand = NewMagickWand();
+    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:srcImage], 1.0);
+    MagickReadImageBlob(wand, [data bytes], [data length]);
+    KernelInfo *kernelInfo = AcquireKernelInfo("Octagon:3");
+    
+    MagickBooleanType status = MagickMorphologyImage(wand, ErodeMorphology, 1, kernelInfo);
+    
+    if (status == MagickFalse) {
+        NSLog(@"Dilation failed");
+    }
+    
+    unsigned char * c_blob;
+    size_t data_length;
+    c_blob = MagickGetImageBlob(wand,&data_length);
+    data = [NSData dataWithBytes:c_blob length:data_length];
+    UIImage *img = [UIImage imageWithData:data];
+    
+    DestroyMagickWand(wand);
+    MagickWandTerminus();
+    return img;
+
+}
+
++ (UIImage*) transformImage:(NSString *)srcImage method:(TransformationMethod) method {
+    MagickWandGenesis();
+    MagickWand *wand = NewMagickWand();
+    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:srcImage], 1.0);
+    MagickReadImageBlob(wand, [data bytes], [data length]);
+    
+    MagickBooleanType status;
+    
+    switch (method) {
+        case SpreadTransformation:
+            status = MagickSpreadImage(wand, 7.0);
+            break;
+        case CharcoalTransformation:
+            status = MagickCharcoalImage(wand, 3.0, 1.0);
+            break;
+        case VignetteTransformation:
+            status = MagickVignetteImage(wand, 40, 175.0,(long)(MagickGetImageWidth(wand)*0.05),(long)MagickGetImageHeight(wand)*0.05);
+            break;
+        default:
+            break;
+    }
+    
+    if (status == MagickFalse) {
+        NSLog(@"Dilation failed");
+    }
+    
+    unsigned char * c_blob;
+    size_t data_length;
+    c_blob = MagickGetImageBlob(wand,&data_length);
+    data = [NSData dataWithBytes:c_blob length:data_length];
+    UIImage *img = [UIImage imageWithData:data];
+    
+    DestroyMagickWand(wand);
+    MagickWandTerminus();
+    return img;
+}
+
+
++ (UIImage*) morphImage:(NSString *)srcImage method:(MorphologyMethod) method {
+    
+    MagickWandGenesis();
+    MagickWand *wand = NewMagickWand();
+    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:srcImage], 1.0);
+    MagickReadImageBlob(wand, [data bytes], [data length]);
+    
+    KernelInfo *kernelInfo;
+    MagickBooleanType status;
+    
+    if (method == EdgeMorphology) {
+        kernelInfo = AcquireKernelInfo("Octagon");
+        status = MagickMorphologyImage(wand, method, 1, kernelInfo);
+    } else if (method == ErodeMorphology || method == DilateMorphology) {
+        kernelInfo = AcquireKernelInfo("Octagon:3");
+        status = MagickMorphologyImage(wand, method, 1, kernelInfo);
+    }
+    
+    if (status == MagickFalse) {
+        NSLog(@"Dilation failed");
+    }
+    
+    unsigned char * c_blob;
+    size_t data_length;
+    c_blob = MagickGetImageBlob(wand,&data_length);
+    data = [NSData dataWithBytes:c_blob length:data_length];
+    UIImage *img = [UIImage imageWithData:data];
+    
+    DestroyMagickWand(wand);
+    MagickWandTerminus();
+    return img;
+    
+}
+
+
 + (UIImage*) createDistanceImage:(CGImageRef)srcCGImage {
     //    MagickWandGenesis();
     //    magick_wand = NewMagickWand();
@@ -92,6 +217,7 @@
     
     // 1.48371 s
     MagickBooleanType status = MagickMorphologyImage(wand, EdgeMorphology, 1, kernelInfo);
+    
 
     /*
      wand – the magick wand.

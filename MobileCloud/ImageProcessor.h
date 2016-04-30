@@ -10,10 +10,14 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+typedef enum { SpreadTransformation, CharcoalTransformation, VignetteTransformation } TransformationMethod;
+
 @interface ImageProcessor : NSObject
 
 + (UIImage*) createPosterizeImage:(CGImageRef)srcCGImage;
 + (UIImage*) createDistanceImage:(CGImageRef)srcCGImage;
 + (UIImage*) convertImage;
+
++ (UIImage*) dilateImage:(NSString *)srcImage;
 
 @end

@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    // Mobile/Wifi
+    // Cellular vs. WiFi vs. Local
     // Azure/Amazon
     // Various Morphology and Transformation
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

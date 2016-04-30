@@ -10,12 +10,12 @@ depends-top-level:
 - "String"
 - "CustomStringConvertible"
 - "CustomDebugStringConvertible"
-- "Bool"
-- !private "StringLiteralType"
-- !private "!"
 - "Result"
-- "ErrorType"
+- "Bool"
 - !private "BooleanLiteralType"
+- !private "!"
+- !private "StringLiteralType"
+- "ErrorType"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
 - !private ["Sb", "deinit"]
