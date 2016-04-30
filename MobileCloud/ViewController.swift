@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    // Mobile/Wifi
+    // Azure/Amazon
+    // Various Morphology and Transformation
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,7 +42,7 @@ class ViewController: UIViewController {
 //            }
 //            .responseJSON { (request, response, data, error) in
         
-        if let image = UIImage(named: "overcome.jpg"), imageData = UIImageJPEGRepresentation(image, 1.0) {
+        if let image = UIImage(named: "aegon.jpg"), imageData = UIImageJPEGRepresentation(image, 1.0) {
 //            self.imageView.image = image
             
 //            let fileURL = NSURL(string: NSTemporaryDirectory())!.URLByAppendingPathComponent("upload.jpg")
@@ -58,9 +62,19 @@ class ViewController: UIViewController {
 //                print("JSON: \(JSON)")
 //            })
             
+//            NSData.bina
+//            imageData.
+            let request = Alamofire.upload(.POST, URL, headers: ["Content-Type": "image/jpeg"], data: imageData)
+            print(request)
             
-            Alamofire.upload(.POST, URL, data: imageData).progress{ (bytesWritten, totalBytesWritten, totalBytesToWrite) in
-                print("Total bytes written: \(totalBytesWritten)")
+//            let request = Alamofire.upload(.POST, URL, data: imageData)
+//            print("Request: \(request)")
+            
+            // bytesWritten is the increment
+            // totalBytesWritten is the cumulative
+            // totalBytesToWrite is the total size of the file
+            Alamofire.upload(.POST, URL, headers: ["Content-Type": "image/jpeg"], data: imageData).progress{ (bytesWritten, totalBytesWritten, totalBytesToWrite) in
+//                print("Percent complete: \(Double(totalBytesWritten)*100.0/Double(totalBytesToWrite))")
                 }.responseJSON(completionHandler: { response in
                     let image = UIImage(data: response.data! as NSData)
                     self.imageView.image = image
@@ -73,6 +87,8 @@ class ViewController: UIViewController {
                     
                     
                 })
+            
+
             
 //            Alamofire.upload(.POST, URL, data: imageData).responseJSON(completionHandler: { response in
 //                let image = UIImage(data: response.data! as NSData)

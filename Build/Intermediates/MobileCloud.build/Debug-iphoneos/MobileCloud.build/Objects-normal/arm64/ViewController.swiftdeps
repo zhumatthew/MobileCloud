@@ -6,19 +6,20 @@ provides-nominal:
 provides-member:
 - ["C11MobileCloud14ViewController", ""]
 provides-dynamic-lookup:
-- "imageView"
 - "didReceiveMemoryWarning"
+- "imageView"
 - "viewDidLoad"
 depends-top-level:
-- "UIViewController"
-- !private "UIImage"
-- "UIImageView"
 - !private "Alamofire"
-- !private "print"
-- "ViewController"
 - !private "UIImageJPEGRepresentation"
-- !private "StringLiteralType"
+- !private "Dictionary"
 - !private "NSData"
+- !private "StringLiteralType"
+- "ViewController"
+- !private "UIImage"
+- !private "print"
+- "UIImageView"
+- "UIViewController"
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "UIImage"]
@@ -47,11 +48,15 @@ depends-member:
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
 - !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "Value"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "Alamofire"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "UIImage"]
 - !private ["Ps28CustomDebugStringConvertible", "UIImageJPEGRepresentation"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "contentMode"]
 - !private ["Ps28CustomDebugStringConvertible", "data"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
@@ -66,8 +71,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Alamofire"]
+- !private ["Ps23CustomStringConvertible", "Key"]
 - !private ["Ps23CustomStringConvertible", "UIImage"]
 - !private ["Ps23CustomStringConvertible", "UIImageJPEGRepresentation"]
+- !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "contentMode"]
 - !private ["Ps23CustomStringConvertible", "data"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
@@ -81,6 +88,10 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "value"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Alamofire"]
 - !private ["Ps9Equatable", "POST"]
@@ -110,6 +121,8 @@ depends-member:
 - !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
 - !private ["Si", "deinit"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
@@ -167,6 +180,7 @@ depends-member:
 - !private ["CSo8NSString", "init"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
+- !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps16RawRepresentable", "POST"]
 - !private ["Ps16RawRepresentable", "ScaleAspectFit"]
@@ -175,6 +189,8 @@ depends-member:
 - !private ["V9Alamofire8Response", "data"]
 - !private ["V9Alamofire8Response", "result"]
 - !private ["O9Alamofire6Result", "value"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "Value"]
 - !private ["Ps10Streamable", "init"]
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
@@ -292,8 +308,12 @@ depends-member:
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps24_ImageLiteralConvertible", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps12_Reflectable", "Key"]
 - ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "Value"]
 - !private ["Ps12_Reflectable", "contentMode"]
 - !private ["Ps12_Reflectable", "image"]
 - !private ["Ps12_Reflectable", "init"]
@@ -303,14 +323,18 @@ depends-nominal:
 - !private "V12CoreGraphics7CGFloat"
 - "Ps11CVarArgType"
 - !private "Vs9Character"
+- !private "Ps14CollectionType"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
 - !private "Sd"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
 - "Ps8Hashable"
+- !private "Ps9Indexable"
 - !private "Si"
 - !private "Vs5Int16"
 - !private "Vs5Int32"
@@ -333,6 +357,7 @@ depends-nominal:
 - !private "C9Alamofire7Request"
 - !private "V9Alamofire8Response"
 - !private "O9Alamofire6Result"
+- !private "Ps12SequenceType"
 - !private "Ps10Streamable"
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"

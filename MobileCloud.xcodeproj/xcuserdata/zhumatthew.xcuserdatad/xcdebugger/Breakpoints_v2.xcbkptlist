@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483679372.31151"
+            timestampString = "483694787.240798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
             <Locations>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483679779.453347"
+            timestampString = "483694787.240798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483679765.721238"
+            timestampString = "483694787.240798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483679868.864832"
+            timestampString = "483694787.240798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
             <Locations>
@@ -234,12 +234,12 @@
                   moduleName = "MobileCloud"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
-                  timestampString = "483679874.613342"
+                  timestampString = "483692139.736126"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "448">
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "864">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -249,11 +249,11 @@
                   moduleName = "MobileCloud"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
-                  timestampString = "483679874.613607"
+                  timestampString = "483692139.736565"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483679924.941532"
+            timestampString = "483694787.240798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
             <Locations>
