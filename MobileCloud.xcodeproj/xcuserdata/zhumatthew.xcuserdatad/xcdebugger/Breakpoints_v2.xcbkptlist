@@ -138,11 +138,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483611107.001053"
+            timestampString = "483679372.31151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483678337.020584"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483678337.020926"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MobileCloud/ViewController.swift"
+            timestampString = "483679779.453347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MobileCloud/ViewController.swift"
+            timestampString = "483679765.721238"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,45 +218,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483658341.726237"
+            timestampString = "483679868.864832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483679874.613342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483679874.613607"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483658343.294298"
+            timestampString = "483679924.941532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MobileCloud/ViewController.swift"
-            timestampString = "483658425.145611"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483679924.948336"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "620">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483679924.948619"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileCloud.ViewController.(viewDidLoad () -&gt; ()).(closure #2)"
+                  moduleName = "MobileCloud"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift"
+                  timestampString = "483679924.948844"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

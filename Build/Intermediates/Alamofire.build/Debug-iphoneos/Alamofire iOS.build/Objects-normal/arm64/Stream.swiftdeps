@@ -19,18 +19,18 @@ provides-dynamic-lookup:
 - "streamTaskBetterRouteDiscovered"
 - "streamTaskDidBecomeInputStream"
 depends-top-level:
-- "NSOutputStream"
-- "Request"
 - "NSNetService"
+- "String"
+- "Int"
+- "NSInputStream"
+- "NSURLSessionStreamDelegate"
+- "Void"
+- "Request"
 - "Manager"
 - "NSURLSession"
-- "Int"
-- !private "dispatch_sync"
-- "NSURLSessionStreamDelegate"
-- "String"
+- "NSOutputStream"
 - "NSURLSessionStreamTask"
-- "Void"
-- "NSInputStream"
+- !private "dispatch_sync"
 depends-member:
 - !private ["Ps9AnyObject", "NetService"]
 - !private ["Ps9AnyObject", "Request"]

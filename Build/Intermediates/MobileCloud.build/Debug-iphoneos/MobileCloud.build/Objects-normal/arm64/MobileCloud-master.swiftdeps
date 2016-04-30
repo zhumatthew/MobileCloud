@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "588d1a9427d7ce7bce7f730e00ab575c"
-build_time: [515293866, 24617000]
+build_time: [515302168, 682754000]
 inputs:
-  "/Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift": [515293791, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/ViewController.swift": [515302153, 0]
   "/Users/zhumatthew/Documents/Xcode/MobileCloud/MobileCloud/AppDelegate.swift": [512072562, 0]

@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "66e3677699acd89b72ea329842e0bfbc"
-build_time: [515105797, 3147000]
+build_time: [515297024, 986511000]
 inputs:
   "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Timeline.swift": [515105089, 0]
   "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Upload.swift": [515105089, 0]
