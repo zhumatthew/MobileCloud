@@ -26,9 +26,17 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bKI-BF-Ecl" secondAttribute="trailing" id="0MI-y8-QGl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bKI-BF-Ecl" secondAttribute="leading" id="980-ue-SHx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bKI-BF-Ecl" secondAttribute="bottom" constant="20" id="S85-r0-yTC"/>
+                            <constraint firstItem="bKI-BF-Ecl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="cMl-ju-JN5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bKI-BF-Ecl" secondAttribute="bottom" constant="20" id="jRS-HP-a2w"/>
                             <constraint firstItem="bKI-BF-Ecl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zvB-BH-u9U"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zvB-BH-u9U"/>
+                                <exclude reference="jRS-HP-a2w"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="bKI-BF-Ecl" id="LWe-DX-R4G"/>

@@ -1,0 +1,21 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "56e784147d5496c6cb7cbe98d4b9126e"
+build_time: [515123860, 164688000]
+inputs:
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Timeline.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Upload.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/ParameterEncoding.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Request.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/ResponseSerialization.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Error.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Manager.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Response.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Alamofire.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/MultipartFormData.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/ServerTrustPolicy.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/NetworkReachabilityManager.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Stream.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Download.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Validation.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Notifications.swift": [515105089, 0]
+  "/Users/zhumatthew/Documents/Xcode/MobileCloud/Alamofire/Source/Result.swift": [515105089, 0]

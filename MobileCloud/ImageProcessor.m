@@ -55,8 +55,8 @@
     
     MagickWandGenesis();
     MagickWand *wand = NewMagickWand();
-    NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"overcome.jpg"]);
-    //    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:@"continuity"],1.0);
+    NSData *data = UIImageJPEGRepresentation([UIImage imageNamed:@"continuity.jpg"], 1.0);
+    //    NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"continuity.jpg"]);
     
     MagickReadImageBlob(wand, [data bytes], [data length]);
     
@@ -69,17 +69,75 @@
     
     // Diamond:1
     // Disk:6.4
-//    KernelInfo *kernelInfo = AcquireKernelInfo("Octagonal:10");
-    KernelInfo *kernelInfo = AcquireKernelInfo("Octagon:3");
+//    KernelInfo *kernelInfo = AcquireKernelInfo("Octagonal");
+//    KernelInfo *kernelInfo = AcquireKernelInfo("Octagon:3");
     // KernelInfo kernelInfo = AcquireKernelBuiltIn(GaussianKernel,const GeometryInfo *);
     // KernelInfo types defined in morphology.h
-//    MagickBooleanType status = MagickMorphologyImage(wand, DistanceMorphology, 1, kernelInfo);
+    KernelInfo *kernelInfo = AcquireKernelInfo("Octagon");
     CFTimeInterval startTime = CACurrentMediaTime();
 
-    MagickBooleanType status = MagickMorphologyImage(wand, DilateMorphology, 1, kernelInfo);
+    // Octagon:3 with ErodeMorphology and DilateMorphology
+    // Octagon with EdgeMorphology
+    // Octagonal:10 or Octagonal with Distance
+    // EdgeOut, EdgeIn, Edge
+    // kernelInfo->
+    
+    // 1.22093 s
+//    MagickBooleanType status = MagickMorphologyImage(wand, DilateMorphology, 1, kernelInfo);
+    
+    // 1.27547 s
+//    MagickBooleanType status = MagickMorphologyImage(wand, ErodeMorphology, 1, kernelInfo);
+    
+//    MagickBooleanType status = MagickMorphologyImage(wand, DistanceMorphology, 1, kernelInfo);
+    
+    // 1.48371 s
+    MagickBooleanType status = MagickMorphologyImage(wand, EdgeMorphology, 1, kernelInfo);
+
+    /*
+     wand – the magick wand.
+     gray – A value other than zero shades the intensity of each pixel.
+     azimuth, elevation – Define the light source direction.
+     azimuth [degrees off the x axis]
+     elevation [pixels above the z-axis]
+     */
+//    MagickBooleanType status = MagickShadeImage(wand, MagickTrue, 70.0, 70.0);
+    
+    /*
+     wand – the magick wand.
+     opacity – percentage transparency.
+     sigma – the standard deviation of the Gaussian, in pixels.
+     x – the shadow x-offset.
+     y – the shadow y-offset.
+     */
+//    MagickBooleanType status = MagickShadowImage(wand, 50.0, 3.0, 30.0, 30.0);
+
+    //wand, (radius?)
+    
+    // 0.826106 s
+//    MagickBooleanType status = MagickSpreadImage(wand, 7.0);
+    
+    // Wand, pixels, Gaussian
+    // 2.9427 s
+//    MagickBooleanType status = MagickCharcoalImage(wand, 3.0, 1.0);
+    // wand, black point (radius?), white point, ellipse offset x, y
+
+    
+//    p_wand = NewPixelWand();
+//    PixelSetColor(p_wand,"black");
+//    MagickSetImageBackgroundColor(wand,p_wand);
+    
+//    MagickBooleanType status = MagickVignetteImage(wand, -20.0, 50.0,(long)(MagickGetImageWidth(wand)*.05),(long)MagickGetImageHeight(wand));
+    
+    // 7.845 s
+//    MagickBooleanType status = MagickVignetteImage(wand, 40, 175.0,(long)(MagickGetImageWidth(wand)*0.05),(long)MagickGetImageHeight(wand)*0.05);
+
+    
+//    MagickBooleanType status = MagickMorphologyImage(wand, EdgeMorphology, 1, kernelInfo);
+
+
     
     CFTimeInterval endTime = CACurrentMediaTime();
-    NSLog(@"Total Runtime of dilation: %g s", endTime - startTime);
+    NSLog(@"Total Runtime of image processing: %g s", endTime - startTime);
 
 //    MagickBooleanType status = MagickPosterizeImage(wand,6,MagickFalse);
     //MagickBooleanType status = MagickNegateImage(wand, MagickFalse);
